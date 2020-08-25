@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'index' %}">Go Back</a>
+<h2>This is the Pet Details for {{ pet_number }}</h2>
+
+
+<p>Name: {{ pet.name|upper }}</p>
+<p>Description: {{ pet.description }}</p>
+{% endblock %}

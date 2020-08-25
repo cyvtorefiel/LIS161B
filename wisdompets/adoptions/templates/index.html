@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>This is the Adoptions Home Page</h1>
+
+<ul>
+  {% for p in pets %}
+  <li><a href="{% url 'pet_detail' p.id %}">{{ p.name }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
