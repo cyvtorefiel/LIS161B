@@ -1,6 +1,17 @@
-#Write a program that prompts the user for Celsius to convert Fahrenheit
+hours = input("Enter hour: ")
 
-celsius = float(input("Enter temperature in Celsius: "))
-fahrenheit = celsius * 9/5 + 32
+try:
+    hours = float(hours)
+except:
+    print("Value error for hours")
 
-print("Temperature in Fahrenheit:", fahrenheit)
+rate = float(input("Enter rate: "))
+try:
+    rate = float(rate)
+except:
+    print("Value error for hours")
+
+if hours > 40:
+    pay = 40 * rate + (hours - 40) * rate * 1.5
+else:
+    pay = hours * rate
